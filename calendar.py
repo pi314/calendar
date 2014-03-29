@@ -73,3 +73,22 @@ dates = [
     'Fri 30',
     'Sat 31',
 ]
+
+week_day_index = {
+    'Sun': 0,
+    'Mon': 1,
+    'Tue': 2,
+    'Wed': 3,
+    'Thu': 4,
+    'Fri': 5,
+    'Sat': 6,
+}
+
+output = []
+
+for i,date in enumerate(dates):
+    week, day = date.split()
+    print('|{} {:<2}'.format(week, day), end='')
+
+    if week == 'Sat':
+        print('')
