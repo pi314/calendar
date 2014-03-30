@@ -1,5 +1,5 @@
 from __future__ import print_function
-#from pprint import pprint as p
+from pprint import pprint as p
 
 number = [2, 1, 9, 2, 1, 8, 7, 6, 9, 3, 0, 12, 3, 3, 11, 10, 10, 11, 11, 11, 11, 2, 1, 10, 2, 2, 8, 6, 6, 8, 3, 2, 8, 3, 3, 9, 7, 7, 7, 7, 6, 9, 2, 1, 9, 2, 2, 8, 7, 7, 9, 2, 2, 10, 3, 4, 11, 8, 8, 8, 8, 8, 10, 2, 1, 8, 1, 1, 7, 6, 6, 6, 2, 1, 8, 4, 5, 10, 7, 7, 8, 8, 8, 10, 2, 1, 9, 1, 1, 7, 7, 7, 8, 2, 1, 10, 3, 4, 10, 9, 9, 9, 9, 9, 11, 2, 1, 9, 1, 1, 7, 7, 7, 9, 2, 1, 10, 4, 6, 9, 9, 9, 9, 9, 9, 11, 2, 1, 9, 1, 1, 7, 7, 7, 9, 2, 1, 10, 3, 4, 12, 10, 10, 10, 10, 10, 12, 2, 1, 9, 1, 1, 7, 7, 7, 9, 2, 1, 10, 3, 5, 8, 6, 6, 6, 6, 6, 8, 2, 1, 9, 1, 1, 7, 7, 7, 9, 2, 1, 11, 3, 6, 10, 8, 8, 9, 9, 9, 11, 2, 1, 9, 1, 1, 7, 7, 7, 9, 2, 1, 10, 4, 6, 9, 9, 9, 9];
 
@@ -11,9 +11,9 @@ dates = [
 
 
 # data which is merged with date and number
-data = [ [date]+number[i:i+3] for i,date in enumerate(dates) ]
+data = [ [date]+number[3*i: 3*i+3] for i,date in enumerate(dates) ]
 data = [['']*4] + data
-#p(data)
+p(data)
 
 # data which is split to partition by week
 data = [ data[i:i+7] for i in range(0,len(data),7)]
